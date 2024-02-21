@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [2, 6, 8, 11, 15, 25];
+      function recursion(array, start, end) {
+        console.log(array);
+        if (start <= end) {
+          const temp = array[start];
+          array[start] = array[end];
+          array[end] = temp;
+          recursion(array, start + 1, end - 1);
+        }
+      }
+      recursion(array, 0, array.length - 1);
+    </script>
+  </body>
+</html>

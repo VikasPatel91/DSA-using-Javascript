@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let queue = [];
+      let currentSize = queue.length;
+      let maxSize = 5;
+
+      function enqueue(newVal) {
+        if (currentSize >= maxSize) {
+          alert("Queue is full");
+        } else {
+          queue[currentSize] = newVal;
+          currentSize++;
+        }
+      }
+      function display() {
+        console.log(queue);
+      }
+
+      function deQueue() {
+        if (currentSize > 0) {
+          for (let i = 0; i < queue.length; i++) {
+            queue[i] = queue[i + 1];
+
+            // console.log(queue[i]);
+          }
+          currentSize--;
+          queue.length = currentSize;
+        } else {
+          alert("queue is already empty");
+        }
+      }
+      enqueue(10);
+    </script>
+  </body>
+</html>

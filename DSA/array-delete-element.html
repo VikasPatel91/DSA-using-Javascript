@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input id="position" type="text" placeholder="Position to delete" />
+      <input type="button" value="submit" onclick="run()" />
+      <span id="result">result</span>
+    </div>
+    <script>
+      let array = [4, 7, 27, 43, 85, 50];
+      document.write(array);
+
+      //   let position = 2;
+
+      //   for (let i = position; i < array.length - 1; i++) {
+      //     array[i] = array[i + 1];
+      //   }
+      //   // array.length = array.length-1;
+      //   console.log(array);
+
+      function run() {
+        let position = parseInt(document.getElementById("position").value);
+        let result = (document.getElementById("result").innerHTML = position);
+        for (let i = position; i < array.length - 1; i++) {
+          array[i] = array[i + 1];
+        }
+        array.length = array.length - 1;
+        console.log(array);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [4, 9, 13, 17];
+      let find = 17;
+      let start = 0;
+      let end = array.length - 1;
+      let pos = undefined;
+      while (start <= end) {
+        let mid = Math.floor((start + end) / 2);
+        // console.log(array[mid]);
+        if (array[mid] === find) {
+          pos = mid;
+          break;
+        } else if (array[mid] < find) {
+          start = mid + 1;
+          console.log("grater");
+        } else {
+          end = mid - 1;
+          console.log("small");
+        }
+      }
+      console.log(pos);
+    </script>
+  </body>
+</html>

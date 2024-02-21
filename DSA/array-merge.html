@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let array = [3, 4, 32, 4, 32, 24, 43];
+      // let array2 = [10, 20, 30, 40];
+
+      // 1st way of mergeing two arrays
+      // let array3 = [...array, ...array2];
+      // console.log(array3);
+
+      // 2nd way of mergeing two arrays
+      //   let array3 = [];
+      //   for (let i = 0; i < array.length; i++) {
+      //     array3[i] = array[i];
+      //   }
+      //   for (let i = 0; i < array2.length; i++) {
+      //     array3[array3.length + i] = array2[i];
+      //   }
+      //   console.warn(array3);
+
+      // 3rd way of mergeing two arrays
+      let array1 = [3, 4, 32, 5, 32, 24, 43];
+      let array2 = [10, 20, 30, 40];
+      let array3 = [];
+      let a1 = 0;
+      let a2 = 0;
+      let a3 = 0;
+      while (a1 < array1.length && a2 < array2.length) {
+        if (array1[a1] < array2[a2]) {
+          array3[a3] = array1[a1];
+          a1++;
+        } else {
+          array3[a3] = array2[a2];
+          a2++;
+        }
+        a3++;
+      }
+      while (a1 < array1.lenght) {
+        array3[a3] = array1[a1];
+        a1++;
+        a3++;
+      }
+      console.log(array3);
+    </script>
+  </body>
+</html>

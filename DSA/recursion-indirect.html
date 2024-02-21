@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function apple() {
+      //     console.log("apple");
+      //     banana();
+      //   }
+      //   function banana() {
+      //     console.log("banana");
+      //     apple();
+      //   }
+      //   apple();
+
+      let totalApple = 0;
+      let money = 100;
+      function buyApple(x) {
+        if (x > 0) {
+          console.log("i have", x, "rs", totalApple);
+          buyMore(x);
+        } else {
+          console.log("i dont have more money", totalApple);
+        }
+      }
+      function buyMore(x) {
+        totalApple++;
+        buyApple(x - 10);
+      }
+      buyApple(money);
+    </script>
+  </body>
+</html>
